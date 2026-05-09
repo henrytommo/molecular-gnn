@@ -1,6 +1,8 @@
 # molecular-gnn
 learning gnns for molecular datasets
 
+initial:
+baseline gcn with 2 layers as a starting point. use batches
 
 # citations
 tox21 dataset
