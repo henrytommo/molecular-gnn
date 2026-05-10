@@ -1,7 +1,7 @@
 # molecular-gnn
 GNNs for molecular datasets
 
-GNN regression for the ESOL dataset with a plotly dashboard to play around with params and assess the model.
+GNN regression for the ESOL dataset with a streamlit dashboard to play around with params and assess the model.
 
 Inspired by "A gentle introduction to gaph neural networks" (see below)
 
