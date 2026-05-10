@@ -6,11 +6,10 @@ from src.model import GNNRegression
 def train(num_epochs):
     model = GNNRegression(hidden_channels=64, in_channels=train_dataset.num_node_features, out_channels=1)
     mse_loss = torch.nn.MSELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4) # weight decay for regularisation
 
     for epoch in range(1, num_epochs + 1):
         model.train()
-        total_loss = 0
         
         for data in train_loader:
             optimizer.zero_grad()  # Clear gradients

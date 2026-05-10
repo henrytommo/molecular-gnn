@@ -11,7 +11,7 @@ def get_predictions(loader, model):
         out = model(data.x.float(), data.edge_index, data.batch)
         
         # Collect values
-        actuals.append(data.y.view(-1, 1).float().cpu())
+        actuals.append(data.y.float().cpu())
         predictions.append(out.cpu())
 
     # Concatenate list of tensors into a single array
