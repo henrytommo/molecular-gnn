@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from src.train import train
-from src.eval import get_predictions
-from src.de import test_loader
+from train import train
+from model_eval import get_predictions
+from de import test_loader
 
 
 # page setup

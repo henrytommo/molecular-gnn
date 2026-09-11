@@ -1,7 +1,7 @@
 import torch
 
-from src.de import train_dataset, train_loader
-from src.model import GNNRegression
+from de import train_dataset, train_loader
+from model import GNNRegression
 
 def train(num_epochs, hidden_channels=32, lr=0.01, weight_decay=1e-4, num_layers=2):
     model = GNNRegression(

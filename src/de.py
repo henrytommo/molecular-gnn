@@ -5,7 +5,10 @@ from torch_geometric.transforms import NormalizeFeatures
 from torch_geometric.data import DataLoader
 from torch_geometric.datasets import MoleculeNet
 
-dataset = MoleculeNet(root='./data', name='ESOL')
+# data/ sits next to src/ - resolve from this file so it works regardless of cwd
+DATA_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
+
+dataset = MoleculeNet(root=DATA_ROOT, name='ESOL')
 dataset.data.x = dataset.data.x.to(torch.float)
 
 # 70:20:10 split
